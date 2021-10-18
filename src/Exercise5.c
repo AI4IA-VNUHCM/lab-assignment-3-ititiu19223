@@ -33,7 +33,6 @@ void Ex5(int arr[], int n)
 	{
 		printf("%d ", arr[i]);
 	}
-	printf("\n");
 }
 
 int main(int argc, char *argv[])
