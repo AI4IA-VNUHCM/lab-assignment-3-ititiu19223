@@ -14,22 +14,21 @@ ______________________________________
 void Ex5(int arr[], int n)
 {
 	//Your codes here
-	int i, j;
-	j = 0;
-	for (i = 0; i < n; i++)
+	int temp, j = 0;
+	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] > 0)
 		{
 			if (i != j)
 			{
-				int temp = arr[i];
+				temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
 			}
 			j++;
 		}
 	}
-	for (i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)
 	{
 		printf("%d ", arr[i]);
 	}
