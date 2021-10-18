@@ -15,57 +15,57 @@ Ex:
 void Ex3(int in_arr[], int n)
 {
 	//Your codes here
-	int max_increase = 1, count_increase = 1, increase_index = 0;
-	int max_decrease = 1, count_decrease = 1, decrease_index = 0;
+	int max_in = 1, count_in = 1, in_idx = 0;
+	int max_de = 1, count_de = 1, de_idx = 0;
 	for (int i = 1; i < n; i++)
 	{
 		if (in_arr[i] > in_arr[i - 1])
 		{
-			count_increase++;
+			count_in++;
 		}
 		else
 		{
-			if (max_increase < count_increase)
+			if (max_in < count_in)
 			{
-				max_increase = count_increase;
-				increase_index = i - max_increase;
+				max_in = count_in;
+				in_idx = i - max_in;
 			}
-			count_increase = 1;
+			count_in = 1;
 		}
 	}
-	if (max_increase < count_increase)
+	if (max_in < count_in)
 	{
-		max_increase = count_increase;
-		increase_index = n - max_increase;
+		max_in = count_in;
+		in_idx = n - max_in;
 	}
 	for (int j = 1; j < n; j++)
 	{
 		if (in_arr[j] < in_arr[j - 1])
 		{
-			count_decrease++;
+			count_de++;
 		}
 		else
 		{
-			if (max_decrease < count_decrease)
+			if (max_de < count_de)
 			{
-				max_decrease = count_decrease;
-				decrease_index = j - max_decrease;
+				max_de = count_de;
+				de_idx = j - max_de;
 			}
-			count_decrease = 1;
+			count_de = 1;
 		}
 	}
-	if (max_decrease < count_decrease)
+	if (max_de < count_de)
 	{
-		max_decrease = count_decrease;
-		decrease_index = n - max_decrease;
+		max_de = count_de;
+		de_idx = n - max_de;
 	}
 	printf("Increasing ");
-	for (int i = increase_index; i < increase_index + max_increase; i++)
+	for (int i = in_idx; i < in_idx + max_in; i++)
 	{
 		printf("%d ", in_arr[i]);
 	}
 	printf("Decreasing ");
-	for (int j = decrease_index; j < decrease_index + max_decrease; j++)
+	for (int j = de_idx; j < de_idx + max_de; j++)
 	{
 		printf("%d ", in_arr[j]);
 	}

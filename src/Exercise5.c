@@ -14,39 +14,39 @@ ______________________________________
 void Ex5(int arr[], int n)
 {
 	//Your codes here
-	int positive[n];
-	int negative[n];
-	int p_count = 0;
-	int n_count = 0;
+	int posi[n];
+	int nega[n];
+	int posi_count = 0;
+	int nega_count = 0;
 
 	for (int i = 0; i < n; i++)
 	{
 		if (arr[i] >= 0)
 		{
-			positive[p_count] = arr[i];
-			p_count += 1;
+			posi[posi_count] = arr[i];
+			posi_count += 1;
 		}
 		else
 		{
-			negative[n_count] = arr[i];
-			n_count += 1;
+			nega[nega_count] = arr[i];
+			nega_count += 1;
 		}
 	}
 
-	for (int i = 0; i < p_count; i++)
+	for (int i = 0; i < posi_count; i++)
 	{
 		if (i == 0)
 		{
-			printf("%d", positive[i]);
+			printf("%d", posi[i]);
 		}
 		else
 		{
-			printf(" %d", positive[i]);
+			printf(" %d", posi[i]);
 		}
 	}
-	for (int i = 0; i < n_count; i++)
+	for (int i = 0; i < nega_count; i++)
 	{
-		printf(" %d", negative[i]);
+		printf(" %d", nega[i]);
 	}
 }
 
